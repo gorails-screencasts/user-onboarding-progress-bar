@@ -1,2 +1,13 @@
 <h1>Welcome to Jumpstart!</h1>
 <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+
+<% if user_signed_in? && current_user.should_see_onboarding? %>
+  Onboarding <%= current_user.onboarding_percent.round %>% Complete
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: <%= current_user.onboarding_percent.round %>%" aria-valuenow="<%= current_user.onboarding_percent %>" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+
+  <div><%= onboarding_step_icon current_user.twitter? %> Add your Twitter profile</div>
+  <div><%= onboarding_step_icon current_user.has_team? %> Create a team</div>
+<% end %>

@@ -1,0 +1,43 @@
+
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <h1>Teams</h1>
+  </div>
+
+  <div class="col-sm-6 text-right">
+  <%= link_to new_team_path, class: 'btn btn-primary' do %>
+    Add New Team
+  <% end %>
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+    
+        <th>Name</th>
+    
+
+            <th>User</th>
+            
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @teams.each do |team| %>
+        <%= content_tag :tr, id: dom_id(team), class: dom_class(team) do %>
+          
+            <td><%= link_to team.name, team %></td>
+          
+
+                      <td><%= team.user %></td>
+          
+          
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,20 @@
+<div class="page-header">
+  <%= link_to teams_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    All Teams
+  <% end %>
+  <%= link_to edit_team_path(@team), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show team</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>User:</dt>
+  <dd><%= @team.user %></dd>
+
+  <dt>Name:</dt>
+  <dd><%= @team.name %></dd>
+
+</dl>
