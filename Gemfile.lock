@@ -219,7 +219,7 @@ GEM
     orm_adapter (0.5.0)
     popper_js (1.14.5)
     public_suffix (3.0.3)
-    puma (3.12.1)
+    puma (3.12.3)
     rack (2.0.6)
     rack-protection (2.0.5)
       rack
@@ -359,7 +359,7 @@ DEPENDENCIES
   omniauth-facebook (~> 5.0)
   omniauth-github (~> 1.3)
   omniauth-twitter (~> 1.4)
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 6.0.0.beta3)
   sass-rails (~> 5.0)
   selenium-webdriver
